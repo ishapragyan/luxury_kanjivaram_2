@@ -50,63 +50,119 @@
 </head>
 
 <body class="bg-surface font-body-md text-body-md text-on-surface antialiased">
-  <header class="fixed top-0 left-0 w-full z-50 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
-    <div
-      class="w-full bg-secondary-container text-on-secondary-container px-margin-desktop py-space-xs text-center flex items-center justify-center">
-      <p class="font-label-sm text-label-sm uppercase tracking-widest">Complimentary Worldwide Insured Delivery on
+  <header id="site-header" class="fixed top-0 left-0 w-full z-50 bg-surface/95 backdrop-blur-md border-b border-outline-variant/30 shadow-[0_2px_12px_rgba(0,0,0,0.03)] transition-all duration-300">
+    <!-- Top Announcement Bar -->
+    <div id="announcement-bar"
+      class="w-full bg-secondary-container text-on-secondary-container px-4 sm:px-6 lg:px-margin-desktop py-1 sm:py-space-xs text-center flex items-center justify-center transition-all duration-300 overflow-hidden">
+      <p class="font-label-sm text-[11px] sm:text-label-sm uppercase tracking-widest truncate">Complimentary Worldwide Insured Delivery on
         Bridal &amp; Heritage Weaves • Handcrafted Silk Mark Certified</p>
     </div>
-    <div class="h-28 max-w-[1600px] mx-auto px-margin-desktop flex items-center justify-between gap-gutter-desktop">
-      <div class="flex-1 flex items-center justify-start gap-space-lg">
-        <div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span
-            class="material-symbols-outlined text-[18px]">language</span><select aria-label="Currency Selector"
-            class="bg-transparent cursor-pointer font-label-md text-label-md text-on-surface-variant focus:outline-none">
+
+    <!-- Main Navigation & Brand Row -->
+    <div id="header-main-row" class="h-20 sm:h-24 lg:h-28 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-margin-desktop flex items-center justify-between gap-2 sm:gap-4 lg:gap-gutter-desktop transition-all duration-300">
+      
+      <!-- Left Column: Desktop utilities & Mobile Menu Trigger -->
+      <div class="flex-1 flex items-center justify-start gap-space-sm sm:gap-space-md lg:gap-space-lg">
+        <!-- Mobile Hamburger Menu Button -->
+        <button id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="mobile-nav-drawer" aria-label="Toggle navigation menu" class="lg:hidden p-2 -ml-2 text-on-surface-variant hover:text-primary transition-colors focus:outline-none flex items-center justify-center">
+          <span id="menu-icon" class="material-symbols-outlined text-[26px]">menu</span>
+        </button>
+
+        <!-- Language & Currency Selector (Desktop) -->
+        <div class="hidden md:flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+          <span class="material-symbols-outlined text-[18px]">language</span>
+          <select aria-label="Currency Selector" class="bg-transparent cursor-pointer font-label-md text-label-md text-on-surface-variant focus:outline-none">
             <option value="INR">INR (₹)</option>
             <option value="USD">USD ($)</option>
             <option value="EUR">EUR (€)</option>
             <option value="GBP">GBP (£)</option>
-          </select></div>
-        <div class="relative flex items-center"><span
-            class="material-symbols-outlined text-on-surface-variant text-[18px] mr-space-xs">search</span><input
-            class="bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none w-44 focus:w-60 transition-all duration-300"
-            placeholder="Search weave, motif, zari..." type="text" /></div>
+          </select>
+        </div>
+
+        <!-- Search Bar (Desktop) & Search Icon Button (Mobile) -->
+        <div class="relative hidden sm:flex items-center">
+          <span class="material-symbols-outlined text-on-surface-variant text-[18px] mr-space-xs">search</span>
+          <input class="bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none w-36 md:w-44 lg:focus:w-56 transition-all duration-300" placeholder="Search weave, motif..." type="text" />
+        </div>
+        <button type="button" aria-label="Search" class="sm:hidden p-1.5 text-on-surface-variant hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-[22px]">search</span>
+        </button>
       </div>
-      <div class="shrink-0 flex items-center justify-center px-4"><a
-          class="flex items-center justify-center group focus:outline-none" data-path="home" href="#"
-          aria-label="Subhaangi - Drapes and Beyond"><img alt="Subhaangi - Drapes and Beyond"
-            class="h-20 sm:h-[84px] md:h-[90px] w-auto max-w-[220px] object-contain transition-all duration-300 group-hover:scale-105 drop-shadow-[0_2px_8px_rgba(119,90,25,0.14)]"
-            src="subhaangi logo.svg" style="aspect-ratio: 1606 / 967;" /></a></div>
-      <div class="flex-1 flex items-center justify-end gap-space-lg"><a
-          class="relative p-space-xs text-on-surface-variant hover:text-primary transition-colors flex items-center"
-          data-path="wishlist" href="#"><span class="material-symbols-outlined text-[22px]">favorite</span><span
-            class="absolute -top-1 -right-1 w-4 h-4 bg-primary text-on-primary font-label-sm text-[10px] leading-none rounded-full flex items-center justify-center">3</span></a><a
-          class="relative p-space-xs text-on-surface-variant hover:text-primary transition-colors flex items-center"
-          data-path="shopping-bag" href="#"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span
-            class="absolute -top-1 -right-1 w-4 h-4 bg-primary text-on-primary font-label-sm text-[10px] leading-none rounded-full flex items-center justify-center">1</span></a><a
-          class="p-space-xs text-on-surface-variant hover:text-primary transition-colors flex items-center"
-          data-path="my-account" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span></a>
-        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
-            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+
+      <!-- Center Column: Logo (Always Centered & Proportional) -->
+      <div class="shrink-0 flex items-center justify-center px-1 sm:px-2 lg:px-4">
+        <a class="flex items-center justify-center group focus:outline-none" data-path="home" href="#" aria-label="Subhaangi - Drapes and Beyond">
+          <img id="site-logo" alt="Subhaangi - Drapes and Beyond" class="h-14 sm:h-20 lg:h-[84px] xl:h-[88px] w-auto max-w-[160px] sm:max-w-[210px] object-contain transition-all duration-300 group-hover:scale-105 drop-shadow-[0_2px_8px_rgba(119,90,25,0.14)]" src="Mask group.png" style="aspect-ratio: 1606 / 967;" />
+        </a>
+      </div>
+
+      <!-- Right Column: Utility Action Icons -->
+      <div class="flex-1 flex items-center justify-end gap-space-xs sm:gap-space-md lg:gap-space-lg">
+        <!-- Wishlist -->
+        <a class="relative p-1.5 sm:p-space-xs text-on-surface-variant hover:text-primary transition-colors flex items-center" data-path="wishlist" href="#" aria-label="Wishlist (3 items)">
+          <span class="material-symbols-outlined text-[22px] sm:text-[24px]">favorite</span>
+          <span class="absolute -top-0.5 -right-0.5 sm:-top-1 sm:-right-1 w-4 h-4 bg-primary text-on-primary font-label-sm text-[10px] leading-none rounded-full flex items-center justify-center">3</span>
+        </a>
+
+        <!-- Shopping Bag -->
+        <a class="relative p-1.5 sm:p-space-xs text-on-surface-variant hover:text-primary transition-colors flex items-center" data-path="shopping-bag" href="#" aria-label="Shopping Bag (1 item)">
+          <span class="material-symbols-outlined text-[22px] sm:text-[24px]">shopping_bag</span>
+          <span class="absolute -top-0.5 -right-0.5 sm:-top-1 sm:-right-1 w-4 h-4 bg-primary text-on-primary font-label-sm text-[10px] leading-none rounded-full flex items-center justify-center">1</span>
+        </a>
+
+        <!-- Account (hidden on tiny screens, visible on sm+) -->
+        <a class="hidden sm:flex p-space-xs text-on-surface-variant hover:text-primary transition-colors items-center" data-path="my-account" href="#" aria-label="My Account">
+          <span class="material-symbols-outlined text-[22px] sm:text-[24px]">account_circle</span>
+        </a>
+
+        <!-- User Avatar -->
+        <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-primary flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-on-primary text-[16px] sm:text-[18px]">person</span>
+        </div>
       </div>
     </div>
-    <nav class="max-w-[1600px] mx-auto px-margin-desktop pb-space-sm flex items-center justify-center gap-space-xl"
-      data-active-classes="bg-primary-container text-on-primary font-semibold"><a
-        class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors px-space-sm py-space-xs"
-        data-path="new-arrivals" href="#">New Arrivals</a><a
-        class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors px-space-sm py-space-xs"
-        data-path="bridal-weaves" href="#">Bridal Weaves</a><a
-        class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors px-space-sm py-space-xs"
-        data-path="heritage-kanjivaram" href="#">Heritage Kanjivaram</a><a
-        class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors px-space-sm py-space-xs"
-        data-path="shop-by-occasion" href="#">Shop by Occasion</a><a
-        class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors px-space-sm py-space-xs"
-        data-path="the-craft-and-weavers" href="#">The Craft &amp; Weavers</a><a
-        class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors px-space-sm py-space-xs"
-        data-path="lookbook" href="#">Lookbook</a><a
-        class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors px-space-sm py-space-xs"
-        data-path="bespoke-bridal" href="#">Bespoke Bridal</a></nav>
+
+    <!-- Desktop Collection Navigation -->
+    <nav class="hidden lg:flex max-w-[1600px] mx-auto px-margin-desktop pb-space-sm items-center justify-center gap-space-lg xl:gap-space-xl whitespace-nowrap overflow-x-auto" data-active-classes="bg-primary-container text-on-primary font-semibold">
+      <a class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors px-space-xs py-space-xs" data-path="new-arrivals" href="#">New Arrivals</a>
+      <a class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors px-space-xs py-space-xs" data-path="bridal-weaves" href="#">Bridal Weaves</a>
+      <a class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors px-space-xs py-space-xs" data-path="heritage-kanjivaram" href="#">Heritage Kanjivaram</a>
+      <a class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors px-space-xs py-space-xs" data-path="shop-by-occasion" href="#">Shop by Occasion</a>
+      <a class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors px-space-xs py-space-xs" data-path="the-craft-and-weavers" href="#">The Craft &amp; Weavers</a>
+      <a class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors px-space-xs py-space-xs" data-path="lookbook" href="#">Lookbook</a>
+      <a class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors px-space-xs py-space-xs" data-path="bespoke-bridal" href="#">Bespoke Bridal</a>
+    </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav-drawer" class="lg:hidden max-h-0 opacity-0 overflow-hidden transition-all duration-300 bg-surface/98 backdrop-blur-xl border-t border-outline-variant/30 px-6 py-0">
+      <div class="py-4 flex flex-col gap-3">
+        <!-- Mobile search input -->
+        <div class="sm:hidden flex items-center bg-surface-container px-3 py-2 rounded-lg mb-2">
+          <span class="material-symbols-outlined text-on-surface-variant text-[20px] mr-2">search</span>
+          <input class="bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none w-full" placeholder="Search weave, motif, zari..." type="text" />
+        </div>
+        <!-- Collection links -->
+        <a class="font-label-md text-label-md uppercase tracking-widest text-on-surface hover:text-primary transition-colors py-1.5 border-b border-outline-variant/15" data-path="new-arrivals" href="#">New Arrivals</a>
+        <a class="font-label-md text-label-md uppercase tracking-widest text-on-surface hover:text-primary transition-colors py-1.5 border-b border-outline-variant/15" data-path="bridal-weaves" href="#">Bridal Weaves</a>
+        <a class="font-label-md text-label-md uppercase tracking-widest text-on-surface hover:text-primary transition-colors py-1.5 border-b border-outline-variant/15" data-path="heritage-kanjivaram" href="#">Heritage Kanjivaram</a>
+        <a class="font-label-md text-label-md uppercase tracking-widest text-on-surface hover:text-primary transition-colors py-1.5 border-b border-outline-variant/15" data-path="shop-by-occasion" href="#">Shop by Occasion</a>
+        <a class="font-label-md text-label-md uppercase tracking-widest text-on-surface hover:text-primary transition-colors py-1.5 border-b border-outline-variant/15" data-path="the-craft-and-weavers" href="#">The Craft &amp; Weavers</a>
+        <a class="font-label-md text-label-md uppercase tracking-widest text-on-surface hover:text-primary transition-colors py-1.5 border-b border-outline-variant/15" data-path="lookbook" href="#">Lookbook</a>
+        <a class="font-label-md text-label-md uppercase tracking-widest text-on-surface hover:text-primary transition-colors py-1.5 border-b border-outline-variant/15" data-path="bespoke-bridal" href="#">Bespoke Bridal</a>
+        <!-- Mobile currency selector -->
+        <div class="md:hidden pt-2 flex items-center justify-between text-on-surface-variant font-label-md text-label-md">
+          <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px]">language</span> Currency</span>
+          <select aria-label="Currency Selector Mobile" class="bg-surface-container px-2 py-1 rounded text-on-surface-variant focus:outline-none font-label-md">
+            <option value="INR">INR (₹)</option>
+            <option value="USD">USD ($)</option>
+            <option value="EUR">EUR (€)</option>
+            <option value="GBP">GBP (£)</option>
+          </select>
+        </div>
+      </div>
+    </div>
   </header>
-  <main class="w-full pt-44 bg-surface min-h-screen">
+  <main class="w-full pt-28 sm:pt-32 lg:pt-44 bg-surface min-h-screen">
     <div class="flex flex-col w-full">
       <!-- EDITORIAL HERO SECTION -->
       <section class="relative w-full overflow-hidden bg-surface-container-low">
@@ -925,7 +981,7 @@
       <div class="text-center max-w-2xl mx-auto mb-space-2xl">
         <div class="flex justify-center mb-space-md"><img alt="Subhaangi - Drapes and Beyond"
             class="h-16 w-auto object-contain opacity-95 transition-all duration-300 hover:scale-105 drop-shadow-[0_2px_8px_rgba(119,90,25,0.12)]"
-            src="subhaangi logo.svg" style="aspect-ratio: 1606 / 967;" /></div>
+            src="Mask group.png" style="aspect-ratio: 1606 / 967;" /></div>
         <p class="font-headline-sm text-headline-sm text-primary mb-space-xs">Centuries of South Indian Handloom
           Excellence &amp; Pure Mulberry Silk</p>
         <p class="font-body-md text-body-md text-on-surface-variant">Woven with ceremonial devotion by master artisans
@@ -1013,6 +1069,93 @@
       </div>
     </div>
   </footer>
+  <script>
+    (function () {
+      const header = document.getElementById('site-header');
+      const announcement = document.getElementById('announcement-bar');
+      const mainRow = document.getElementById('header-main-row');
+      const logo = document.getElementById('site-logo');
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const menuIcon = document.getElementById('menu-icon');
+      const drawer = document.getElementById('mobile-nav-drawer');
+
+      let ticking = false;
+      function onScroll() {
+        const isScrolled = window.scrollY > 40;
+        if (isScrolled) {
+          if (header) {
+            header.classList.add('shadow-md', 'bg-surface/98');
+            header.classList.remove('shadow-[0_2px_12px_rgba(0,0,0,0.03)]');
+          }
+          if (announcement) {
+            announcement.classList.add('max-h-0', 'opacity-0', '!py-0');
+            announcement.classList.remove('py-1', 'sm:py-space-xs');
+          }
+          if (mainRow) {
+            mainRow.classList.remove('h-20', 'sm:h-24', 'lg:h-28');
+            mainRow.classList.add('h-16', 'sm:h-20', 'lg:h-22');
+          }
+          if (logo) {
+            logo.classList.remove('h-14', 'sm:h-20', 'lg:h-[84px]', 'xl:h-[88px]');
+            logo.classList.add('h-12', 'sm:h-16', 'lg:h-[72px]');
+          }
+        } else {
+          if (header) {
+            header.classList.remove('shadow-md', 'bg-surface/98');
+            header.classList.add('shadow-[0_2px_12px_rgba(0,0,0,0.03)]');
+          }
+          if (announcement) {
+            announcement.classList.remove('max-h-0', 'opacity-0', '!py-0');
+            announcement.classList.add('py-1', 'sm:py-space-xs');
+          }
+          if (mainRow) {
+            mainRow.classList.add('h-20', 'sm:h-24', 'lg:h-28');
+            mainRow.classList.remove('h-16', 'sm:h-20', 'lg:h-22');
+          }
+          if (logo) {
+            logo.classList.add('h-14', 'sm:h-20', 'lg:h-[84px]', 'xl:h-[88px]');
+            logo.classList.remove('h-12', 'sm:h-16', 'lg:h-[72px]');
+          }
+        }
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function () {
+        if (!ticking) {
+          window.requestAnimationFrame(onScroll);
+          ticking = true;
+        }
+      }, { passive: true });
+
+      if (menuBtn && drawer && menuIcon) {
+        menuBtn.addEventListener('click', function () {
+          const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+          if (isExpanded) {
+            drawer.classList.remove('max-h-[500px]', 'opacity-100', 'py-4');
+            drawer.classList.add('max-h-0', 'opacity-0', 'py-0');
+            menuIcon.textContent = 'menu';
+            menuBtn.setAttribute('aria-expanded', 'false');
+          } else {
+            drawer.classList.remove('max-h-0', 'opacity-0', 'py-0');
+            drawer.classList.add('max-h-[500px]', 'opacity-100', 'py-4');
+            menuIcon.textContent = 'close';
+            menuBtn.setAttribute('aria-expanded', 'true');
+          }
+        });
+
+        drawer.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            drawer.classList.remove('max-h-[500px]', 'opacity-100', 'py-4');
+            drawer.classList.add('max-h-0', 'opacity-0', 'py-0');
+            menuIcon.textContent = 'menu';
+            menuBtn.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      onScroll();
+    })();
+  </script>
 </body>
 
 </html>
